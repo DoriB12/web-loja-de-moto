@@ -1,59 +1,145 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Volt - Nossas Motos</title>
-    <link rel="stylesheet" href="../src/css/estilo.css">
+    <title>Volt Riders - Loja</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            padding: 20px;
+        }
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        header a {
+            color: #00aa5b;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        .container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .produtos {
+            flex: 2;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            min-width: 300px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .card h4 { margin-bottom: 10px; }
+        .card p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .preco {
+            font-weight: bold;
+            color: #00aa5b;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        .btn-add {
+            background-color: #00aa5b;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        .btn-add:hover { background-color: #008848; }
+        
+        /* Estilo do Carrinho */
+        .carrinho {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            min-width: 280px;
+            height: fit-content;
+        }
+        .carrinho h3 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .item-carrinho {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0.95rem;
+        }
+        .total-box {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 2px solid #333;
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">
-            <h1> E-Volt</h1>
-        </div>
         <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="loja.html">Motos</a></li>
-                <li><a href="sobre.html">Quem Somos</a></li>
-            </ul>
+            <a href="../index.html">← Voltar para Home</a>
         </nav>
+        <h1 style="margin-top: 10px;">Nossa Loja Volt Riders</h1>
     </header>
 
-    <main>
-        <section class="vitrine">
-            <h2>Escolha sua próxima Moto Elétrica</h2>
-            <p>Modelos de alta performance, zero emissão e máxima economia para o seu dia a dia.</p>
+    <div class="container">
+        <div class="produtos" id="lista-produtos"></div>
 
-            <div class="lista=motos">
-                <div class="moto-card">
-                    <h3>Volt City 3000</h3>
-                    <p class="preco">R$ 14.900</p>
-                    <p class="detalhes">Autonomia: 80km | Vel. Máxima: 75 km/h</p>
-                    <button class="btn-comprar">Tenho Interesse</button>
-                </div>
-
-                <div class="moto-card">
-                    <h3>Volt Sport Pro</h3>
-                    <p class="preco">R$ 22.500</p>
-                    <p class="detalhes">Autonomia: 120km | Vel. Máxima: 110 km/h</p>
-                    <button class="btn-comprar">Tenho Interesse</button>
-                </div>
-
-                <div class="moto-card">
-                    <h3>Volt Cargo X</h3>
-                    <p class="preco">R$ 17.200</p>
-                    <p class="detalhes">Autonomia: 100km | Ideal para Entregas</p>
-                    <button class="btn-comprar">Tenho Interesse</button>
-                </div>
+        <div class="carrinho">
+            <h3>Seu Carrinho</h3>
+            <div id="itens-carrinho">
+                <p style="color: #999; text-align: center;">O carrinho está vazio.</p>
             </div>
-        </section>
-    </main>
+            <div class="total-box">
+                <span>Total:</span>
+                <span id="valor-total">R$ 0,00</span>
+            </div>
+        </div>
+    </div>
 
-    <footer>
-        <p>&copy; 2026 E-Volt Motos Elétricas. Todos os direitos reservados.</p>
-    </footer>
-    
+    <script src="../src/js/script.js"></script>
 </body>
 </html>
