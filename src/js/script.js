@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
             nome: "Volt Cyber Beast", 
             preco: 14900, 
             desc: "Presença imponente com visual All Black fosco e motor de alta potência.", 
-            img: "/src/assests/img/modelo1.jpg" // Começando com / para o Live Server achar em qualquer página
+            img: "/src/assests/img/modelo1.jpg"
         },
         { 
             id: 2, 
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     ];
 
-    // Array do carrinho de compras
+
     let carrinho = [];
 
     const containerHome = document.getElementById("container-destaques");
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function() {
             containerLoja.appendChild(card);
         });
 
-        // Evento para capturar o clique no botão de adicionar
+
         containerLoja.addEventListener("click", function(e) {
             if (e.target.classList.contains("btn-add")) {
                 const idSelecionado = parseInt(e.target.getAttribute("data-id"));
@@ -99,7 +99,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Função para renderizar os itens na barra do carrinho e calcular com REDUCE
     function atualizarCarrinho() {
         const itensContainer = document.getElementById("itens-carrinho");
         const totalContainer = document.getElementById("valor-total");

@@ -5,6 +5,7 @@
     --cor-texto-claro: #ffffff;
     --cor-fundo-site: #f4f7f6;
     --cor-texto-escuro: #333333;
+    --cor-neon: #1100ff;
 }
 
 * {
@@ -49,11 +50,9 @@ main {
     text-align:center;
 }
 
-/*seção do banner*/
 .banner {
     padding: 60px 20px;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assests/img/banner.jpg') no-repeat center/cover;
-/* fundo escuro para destacar o texto*/
     color: var(--cor-texto-claro);
 }
 
@@ -70,7 +69,6 @@ main {
     margin-right: auto;
 }
 
-/*botão de chamada*/
 .btn-conhecer {
     display: inline-block;
     background-color: var(--cor-neon);
@@ -87,7 +85,6 @@ main {
     background-color: #00cc6a;
 }
 
-/*seção de beneficios (cards)*/
 .destaques {
     padding: 60px 5%;
     background-color: #fff;
@@ -120,7 +117,7 @@ main {
     color: var(--cor-fundo-escuro);
 }
 
-/* Rodapé */
+
 footer {
     background-color: var(--cor-fundo-escuro);
     color: #888;
@@ -129,7 +126,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Estilização da Vitrine de Motos */
 .vitrine {
     padding: 40px 5%;
 }
