@@ -126,3 +126,5 @@ document.addEventListener("DOMContentLoaded", function() {
         totalContainer.innerText = `R$ ${valorTotalAcumulado.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`;
     }
 });
+
+/*Fim :)*/
