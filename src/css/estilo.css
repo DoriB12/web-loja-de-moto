@@ -53,7 +53,7 @@ main {
 .banner {
     padding: 60px 20px;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assests/img/banner.jpg') no-repeat center/cover;
-    /* fundo escuro para destacar o texto*/
+/* fundo escuro para destacar o texto*/
     color: var(--cor-texto-claro);
 }
 
@@ -102,7 +102,7 @@ main {
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap; /* Se a tela for pequena, eles quebram de linha sozinhos */
+    flex-wrap: wrap;
 }
 
 .card {
@@ -160,7 +160,7 @@ footer {
 }
 
 .moto-card:hover {
-    transform: translateY(-5px); /* Efeito lindo de subir um pouquinho quando passa o mouse */
+    transform: translateY(-5px);
     border-color: var(--cor-neon);
 }
 
@@ -199,4 +199,42 @@ footer {
 .btn-comprar:hover {
     background-color: var(--cor-neon);
     color: var(--cor-fundo-escuro);
+}
+
+/* Estilização da Página Quem Somos */
+.sobre-nos {
+    padding: 40px 5%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.sobre-nos h2 {
+    font-size: 2.2rem;
+    color: var(--cor-fundo-escuro);
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.sobre-nos .subtitulo {
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.texto-missao h3 {
+    font-size: 1.5rem;
+    color: var(--cor-fundo-escuro);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--cor-neon);
+    padding-left: 10px;
+}
+
+.texto-missao p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 20px;
 }
