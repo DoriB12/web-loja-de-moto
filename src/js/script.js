@@ -6,35 +6,35 @@ document.addEventListener("DOMContentLoaded", function() {
             nome: "Volt Cyber Beast", 
             preco: 14900, 
             desc: "Presença imponente com visual All Black fosco e motor de alta potência.", 
-            img: "/src/assests/img/modelo1.jpg"
+            img: "src/assets/modelo-1.jpg"
         },
         { 
             id: 2, 
             nome: "Volt Red Pro", 
             preco: 22500, 
             desc: "Design aerodinâmico premium em vermelho intenso com performance de pista.", 
-            img: "/src/assests/img/modelo2.jpg" 
+            img: "src/assets/modelo-2.jpg" 
         },
         { 
             id: 3, 
             nome: "Volt Neon Pulse", 
             preco: 17200, 
             desc: "Estilo futurista com pintura azul metálica eletrizante e muita tecnologia.", 
-            img: "/src/assests/img/modelo3.jpg" 
+            img: "src/assets/modelo-3.jpg" 
         },
         { 
             id: 4, 
             nome: "Volt Delivery Cute", 
             preco: 12800, 
             desc: "Prática, amarela e compacta. Perfeita para entregas com aquele estilo de dorama.", 
-            img: "/src/assests/img/modelo4.jpg" 
+            img: "src/assets/modelo-4.jpg" 
         },
         { 
             id: 5, 
             nome: "Volt Heritage Classic", 
             preco: 28900, 
             desc: "Visual retrô refinado com acabamento em couro marrom e linhas clássicas.", 
-            img: "/src/assests/img/modelo5.jpg" 
+            img: "src/assets/modelo-5.jpg" 
         }
     ];
 
